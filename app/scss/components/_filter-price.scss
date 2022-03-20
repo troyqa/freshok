@@ -1,0 +1,77 @@
+.filter-price {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    max-width: 80px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid $silver-600;
+    border-radius: 3px;
+    background-color: $silver-100;
+    font-family: "OpenSans";
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+    &::placeholder {
+      font-family: "OpenSans";
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0.03em;
+      color: $dark-500;
+    }
+  }
+
+  &__label,
+  &__currency {
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $silver-600;
+  }
+
+  &__currency {
+    line-height: 1;
+  }
+
+  .irs-bar {
+    top: 30px;
+    height: 2px;
+    background-color: $green-900;
+  }
+
+  .irs-line {
+    top: 30px;
+    height: 2px;
+    background-color: #c4c4c4;
+  }
+
+  .irs-from,
+  .irs-to,
+  .irs-single,
+  .irs-min,
+  .irs-max {
+    display: none;
+  }
+
+  .irs-handle i:first-child {
+    width: 18px;
+    height: 18px;
+    background-color: $green-900;
+    border-radius: 20px;
+  }
+
+  .irs--flat .irs-handle.state_hover > i:first-child,
+  .irs--flat .irs-handle:hover > i:first-child {
+    background-color: $green-600;
+  }
+
+  .irs-slider.state_hover,
+  .irs-slider:hover {
+    background: transparent;
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+.logo {
+  &__img {
+    max-width: none;
+
+    @include mq("desktop") {
+      width: 160px;
+    }
+
+    @include mq("tablet-2") {
+      width: 130px;
+    }
+
+    @include mq("tablet") {
+      width: 37px;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    max-width: none;
+
+    @include mq("tablet") {
+      display: block;
+    }
+  }
+}

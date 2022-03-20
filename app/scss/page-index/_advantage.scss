@@ -1,0 +1,90 @@
+.advantage {
+  padding: 45px 0 20px;
+  background-color: $silver-100;
+
+  @include mq('phone') {
+    padding: 25px 0 0;
+  }
+
+  @include mq('tablet') {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include mq('phone') {
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    max-width: 246px;
+    width: 100%;
+    padding: 2px 0 12px 75px;
+    @extend %bg;
+    background-size: 50px 50px;
+    background-position: left top;
+
+    @include mq('tablet') {
+      max-width: none;
+      margin-bottom: 31px;
+    }
+
+    @include mq('phone') {
+      margin-bottom: 20px;
+    }
+
+    &--scooter {
+      background-image: url("../images/icons/icon-scooter.svg");
+    }
+
+    &--refund {
+      background-image: url("../images/icons/icon-refund.svg");
+    }
+
+    &--24hours {
+      background-image: url("../images/icons/icon-24hours.svg");
+    }
+
+    &:not(:last-child) {
+      margin-right: 84px;
+
+      @include mq('desktop') {
+        margin-right: 60px;
+      }
+
+      @include mq('tablet-2') {
+        margin-right: 40px;
+      }
+
+      @include mq('tablet') {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &__text {
+    @include line-clamp(3);
+    color: $dark-500;
+  }
+
+  .container {
+    @include mq('phone') {
+      margin: 0;
+    }
+  }
+}

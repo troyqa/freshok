@@ -1,0 +1,170 @@
+.header {
+  position: relative;
+  &__top {
+    padding: 14px 0;
+    background-color: $dark-800;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    color: $white;
+
+    @include mq("phone-2") {
+      padding: 2px 0 4px;
+    }
+  }
+
+  &__logo {
+    margin-right: 24px;
+
+    @include mq("tablet-2") {
+      margin-right: 10px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    text-transform: uppercase;
+
+    &--short {
+      @include mq("tablet") {
+        order: 2;
+      }
+    }
+
+    &--hide {
+      @include mq("tablet-2") {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 24px;
+
+      @include mq("tablet-2") {
+        margin-right: 14px;
+      }
+
+      @include mq("phone-2") {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 10px 0;
+
+    &::after {
+      @include pseudo;
+      top: 6px;
+      left: 0;
+      height: 22px;
+      @extend %bg;
+    }
+
+    &--address,
+    &--tel {
+      position: relative;
+      padding-left: 34px;
+
+      @include mq("tablet") {
+        margin-right: 2px;
+        font-size: 0;
+      }
+
+      @include mq("tablet") {
+        &::after {
+          top: -5px;
+          left: 20px;
+        }
+      }
+    }
+
+    &--address {
+      margin-right: 26px;
+      padding-left: 44px;
+
+      &::after {
+        width: 32px;
+        background-image: url("../images/icons/icon-address.svg");
+      }
+
+      @include mq("tablet-2") {
+        margin-right: 3px;
+      }
+    }
+
+    &--tel {
+      &::after {
+        width: 22px;
+        background-image: url("../images/icons/icon-tel.svg");
+      }
+    }
+  }
+
+  &__menu {
+    padding: 25px 0;
+    font-weight: 600;
+    background-color: $green-900;
+
+    @include mq("tablet-2") {
+      padding: 15px 0;
+    }
+
+    @include mq("tablet-2") {
+      padding: 7px 0;
+    }
+  }
+
+  &__catalog {
+    margin-right: 30px;
+
+    @include mq("tablet-2") {
+      margin-right: auto;
+    }
+  }
+
+  &__form-search {
+    margin-right: 40px;
+    transition: opacity 0.4s;
+
+    @include mq("desktop") {
+      margin-right: 25px;
+    }
+
+    @include mq("tablet-2") {
+      display: none;
+      opacity: 0;
+      transform: translateY(-300%);
+    }
+  }
+
+  .header__form-search--active {
+    position: absolute;
+    display: block;
+    max-width: none;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    z-index: 10;
+    transform: translateY(0);
+    opacity: 1;
+
+    .form__input {
+      border-radius: 0;
+    }
+
+    .form__btn {
+      border-radius: 0;
+    }
+  }
+}

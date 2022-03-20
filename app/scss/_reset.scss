@@ -46,6 +46,7 @@ input,
 textarea,
 select {
   font: inherit;
+  border: transparent;
 }
 
 button {
@@ -69,4 +70,8 @@ a,
 input,
 textarea {
   outline: transparent;
+}
+
+address {
+  font-style: normal;
 }

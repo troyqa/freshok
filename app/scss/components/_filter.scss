@@ -1,0 +1,46 @@
+.filter {
+  width: 300px;
+  border: 1px solid $silver-600;
+  border-radius: 6px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 18px;
+    text-align: left;
+    font-family: "Ruda";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid #c1c1c1;
+
+    &::after {
+      @include pseudo;
+      top: 30px;
+      right: -35px;
+      width: 12px;
+      height: 12px;
+      margin-right: 60px;
+      border-top: 1px solid $silver-600;
+      border-right: 1px solid $silver-600;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__wrapper {
+    // display: none;
+    padding: 18px;
+    // opacity: 0;
+
+    &--active {
+      display: block;
+      opacity: 1;
+    }
+  }
+}

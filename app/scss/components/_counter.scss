@@ -1,0 +1,42 @@
+.counter {
+  position: relative;
+  display: flex;
+
+  &__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background-color: $green-900;
+  }
+
+  &__minus,
+  &__plus {
+    height: 2px;
+    width: 16px;
+    background-color: $white;
+    border-radius: 2px;
+  }
+
+  &__plus {
+    &::after {
+      @include pseudo;
+      top: 4px;
+      left: 11px;
+      height: 16px;
+      width: 2px;
+      background-color: $white;
+      border-radius: 2px;
+    }
+  }
+
+  &__num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    background-color: rgba($green-900, 0.1);
+  }
+}

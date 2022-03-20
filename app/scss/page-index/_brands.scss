@@ -1,0 +1,19 @@
+// !!! сделать свайпер скрипт !!!
+
+.brands {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 55px 0 50px;
+  }
+
+  &__item {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

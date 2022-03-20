@@ -1,0 +1,131 @@
+.offers {
+  padding-bottom: 72px;
+
+  @include mq("tablet-2") {
+    padding-bottom: 56px;
+  }
+
+  @include mq("phone-2") {
+    padding-bottom: 48px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 49% 1fr 1fr;
+    grid-template-rows: minmax(auto, 300px);
+    grid-gap: 30px;
+
+    @include mq("desktop") {
+      grid-gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq("tablet-2") {
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include mq("tablet") {
+      grid-gap: 15px;
+    }
+
+    @include mq("phone-2") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: 76px 32px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    @extend %bg;
+
+    @include mq("phone-2") {
+      padding: 76px 0 32px 10px;
+    }
+
+    &--fresh {
+      background-image: url("../images/offers/fresh-fruits.jpg");
+
+      @include mq("tablet-2") {
+        grid-column: span 2;
+      }
+
+      @include mq("phone-2") {
+        grid-column: 1;
+      }
+    }
+
+    &--season {
+      background-image: url("../images/offers/season-sale.jpg");
+    }
+
+    &--bread {
+      background-image: url("../images/offers/fresh-bread.jpg");
+    }
+  }
+
+  &__title {
+    max-width: 200px;
+    margin-bottom: 8px;
+    font-family: "Ruda";
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.4;
+    color: $dark-500;
+    @include line-clamp(3);
+
+    @include mq("tablet") {
+      font-size: 24px;
+    }
+
+    @include mq("phone-2") {
+      margin-bottom: 77px;
+    }
+
+    &--fresh {
+      max-width: 350px;
+
+      @include mq("phone-2") {
+        max-width: 270px;
+      }
+    }
+
+    &--season {
+      @include mq("phone-2") {
+        max-width: 185px;
+      }
+    }
+
+    &--bread {
+      @include mq("phone-2") {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__above {
+    display: block;
+    margin-bottom: 18px;
+    font-family: "OpenSans";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.1em;
+  }
+
+  &__link {
+    padding-bottom: 5px;
+    font-weight: 700;
+    line-height: 1;
+    border-bottom: 2px solid;
+  }
+
+  &__title--fresh,
+  &__above--fresh,
+  &__link--fresh {
+    color: $white;
+    text-shadow: 2px 2px 0 rgba($black, 0.25);
+  }
+}

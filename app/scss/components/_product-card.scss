@@ -1,0 +1,128 @@
+.product-card {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 52px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  transition: border-color 0.3s;
+
+  @include mq("desktop") {
+    padding-top: 45px;
+  }
+
+  &:hover {
+    border: 1px solid $green-900;
+  }
+
+  &__link {
+    position: relative;
+    margin-bottom: 22px;
+    transition: background-color 0.3s;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      transition: background-color 0.3s, opacity 0.3s;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover::before {
+      background-color: rgba($black, 0.1);
+    }
+
+    &:after {
+      opacity: 0;
+    }
+
+    &:hover::after {
+      top: 90px;
+      left: 50%;
+      padding: 20px;
+      @extend %bg;
+      background-image: url("../images/icons/icon-search-green.svg");
+      background-size: 20px;
+      background-color: $white;
+      border-radius: 50%;
+      opacity: 1;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__title {
+    margin-bottom: auto;
+    padding: 0 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    @include line-clamp(3);
+
+    @include mq("phone-2") {
+      margin-bottom: 48px;
+      padding: 0 10px;
+    }
+  }
+
+  &__purchase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px 16px 21px;
+
+    @include mq("phone") {
+      padding: 0 12px 13px 10px;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }
+
+  &__price {
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+
+    &--promotion {
+      position: relative;
+      margin-bottom: 5px;
+      color: $silver-600;
+
+      &::after {
+        @include pseudo;
+        top: 0;
+        width: 100%;
+        height: 50%;
+        border-bottom: 1px solid $silver-600;
+        transform: rotate(345deg);
+      }
+    }
+  }
+
+  &__btn {
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__cart {
+    fill: $white;
+    width: 16px;
+    height: 15px;
+  }
+}

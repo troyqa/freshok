@@ -1,0 +1,18 @@
+.contact {
+  max-width: 215px;
+
+  @include mq("tablet-2") {
+    min-width: 201px;
+  }
+
+  &__list {
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+}

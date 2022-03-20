@@ -1,0 +1,145 @@
+<header class="header">
+  <nav class="nav">
+
+    <div class="header__top">
+      <div class="container">
+
+        <div class="header__inner">
+          <button class="burger" type="button">
+            <span class="burger__item"></span>
+            <span class="sr-only">Открыть меню</span>
+          </button>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link header__link--address anim" href="#">адрес и время
+                доставки</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link header__link--tel anim" href="#">горячая линия 24/7</a>
+            </li>
+          </ul>
+
+          <ul class="header__list header__list--hide">
+            <li class="header__item">
+              <a class="header__link anim" href="#">доставка</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link anim" href="#">о нас</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link anim" href="#">новости</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__menu">
+      <div class="container">
+
+        <div class="header__inner">
+
+          <a class="logo header__logo" href="#">
+            <picture class="logo__img">
+              <source media="(max-width: 768px)" srcset="images/logo-short.svg" width="37" height="40">
+              <source srcset="images/logo.svg" width="200" height="60">
+              <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="60">
+            </picture>
+          </a>
+
+          <div class="catalog header__catalog">
+            <button class="catalog__btn" type="button">
+              <span class="catalog__burger"></span>
+              Каталог продуктов
+            </button>
+
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Овощи и фрукты</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Бакалея</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Молочные продукты</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Хлеб</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Мясо</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Колбаса</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Рыба</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Алкоголь</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Напитки</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Торты</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Мясо</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Чай, кофе</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <form class="form header__form-search" action="#">
+            <label class="sr-only" for="search">Форма поиска товаров</label>
+            <input class="form__input" type="search" name="search" id="search" placeholder="Найти в магазине..."
+              required>
+            <button class="form__btn" type="submit">поиск</button>
+          </form>
+
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--search" type="button">
+                <span class="sr-only">Поиск</span>
+                <svg class="user-nav__icon">
+                  <use xlink:href="images/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__btn user-nav__btn--hide" type="button">
+                <span class="sr-only">Профиль</span>
+                <svg class="user-nav__icon">
+                  <use xlink:href="images/sprite.svg#icon-user"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__btn" type="button">
+                <span class="sr-only">Избранное</span>
+                <svg class="user-nav__icon">
+                  <use xlink:href="images/sprite.svg#icon-heart"></use>
+                </svg>
+                <span class="user-nav__count">12</span>
+              </button>
+            </li>
+            <li class="user-nav__item">
+              <button class="user-nav__btn basket--activator" type="button">
+                <span class="sr-only">Корзина</span>
+                <svg class="user-nav__icon">
+                  <use xlink:href="images/sprite.svg#icon-cart"></use>
+                </svg>
+                <span class="user-nav__count">12</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
