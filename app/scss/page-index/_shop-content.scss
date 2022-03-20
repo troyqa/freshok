@@ -1,4 +1,7 @@
 .shop-content {
+  &__products {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   &__filters {
     display: flex;
@@ -14,7 +17,7 @@
   }
 
   .jq-selectbox__select-text {
-    font-family: 'OpenSans';
+    font-family: "OpenSans";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -31,6 +34,15 @@
     border-bottom-color: transparent;
     border: 1px solid $silver-600;
     border-radius: 3px;
+
+    &:active {
+      background: $green-100;
+      box-shadow: inset 1px 1px 3px $green-100;
+    }
+  }
+
+  .jq-selectbox.focused .jq-selectbox__select {
+    border-color: $green-900;
   }
 
   .jq-selectbox__trigger {
@@ -38,13 +50,24 @@
     border-left: none;
   }
 
+  .jq-selectbox li:hover {
+    background-color: transparent;
+    color: $green-900;
+  }
+
+  .jq-selectbox li.selected {
+    background-color: transparent;
+    color: $green-900;
+  }
+
   .jq-selectbox__trigger-arrow {
-    width: 8px;
-    height: 8px;
-    border-top: 1px solid #c1c1c1;
-    border-right: 1px solid #c1c1c1;
-    border-left: none;
-    transform: rotate(135deg);
+    position: absolute;
+    top: 16px;
+    width: 11px;
+    height: 6px;
+    border: none;
+    @extend %bg;
+    background-image: url("../../images/icons/icon-arrow.svg");
   }
 
   &__btn {

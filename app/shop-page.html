@@ -545,18 +545,22 @@
     <div class="shop-content">
       <div class="shop-content__filters">
         <div class="shop-content__item">
-          <select class="shop-content__sort">
-            <option value="">По названию</option>
-            <option value="">по популярности</option>
-            <option value="">От дешевых к дорогим</option>
-          </select>
+          <form class="shop-content__form" action="#">
+            <select class="shop-content__sort">
+              <option value="">По названию</option>
+              <option value="">по популярности</option>
+              <option value="">От дешевых к дорогим</option>
+            </select>
+          </form>
         </div>
         <div class="shop-content__item">
-          <select class="shop-content__sort">
-            <option value="">по 12</option>
-            <option value="">по 15</option>
-            <option value="">по 18</option>
-          </select>
+          <form class="shop-content__form" action="#">
+            <select class="shop-content__sort">
+              <option value="">по 12</option>
+              <option value="">по 15</option>
+              <option value="">по 18</option>
+            </select>
+          </form>
         </div>
         <div class="shop-content__item">
           <button class="shop-content__btn">
@@ -574,7 +578,43 @@
         </div>
       </div>
       <div class="shop-content__inner">
-        <ul class="top-products__list" data-ref="container-1">
+        <ul class="top-products__list shop-content__products" data-ref="container-1">
+
+          <li class="top-products__item mix category-a">
+            <article class="product-card">
+              <button class="fav-btn" type="button">
+                <span class="sr-only">Добавить в избранное</span>
+                <svg class="fav-btn__icon">
+                  <use xlink:href="images/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <a class="product-card__link" href="#">
+                <img class="product-card__img" src="images/products/lifeline-fresh.jpg" width="215" height="215"
+                  alt="Ананас">
+              </a>
+              <h3 class="product-card__title">Напиток LIFELINE Intellectual со вкусом арбуза и яблока Фонте Аква 0.5 л
+              </h3>
+              <div class="product-card__purchase">
+                <div class="product-card__pricing">
+                  <span class="product-card__price product-card__price--promotion">149
+                    <span class="currency">₽</span>
+                  </span>
+                  <span class="product-card__price">99
+                    <span class="currency">₽</span></span>
+                </div>
+                <button class="btn product-card__btn" type="button">
+                  <span class="sr-only">Добавить в корзину</span>
+                  <svg class="product-card__cart">
+                    <use xlink:href="images/sprite.svg#icon-cart"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="badges">
+                <span class="badges__item badges__item--new">новинка</span>
+                <span class="badges__item badges__item--discount">-50%</span>
+              </div>
+            </article>
+          </li>
 
           <li class="top-products__item mix category-a">
             <article class="product-card">
