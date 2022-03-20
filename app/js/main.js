@@ -10,7 +10,7 @@ $(function () {
         arrows: false,
         dots: true,
       }
-    }, ]
+    },]
   });
 
   $('.catalog__btn').on('click', function () {
@@ -43,6 +43,21 @@ $(function () {
   });
 
   $('.shop-content__sort').styler();
+
+  $('.shop-content__btn').on('click', function () {
+    $('.shop-content__btn').removeClass('shop-content__btn--active');
+    $(this).addClass('shop-content__btn--active');
+  })
+
+  $('.shop-list').on('click', function () {
+    $('.shop-content__products').addClass('shop-content__products--list');
+    $('.product-card').addClass('shop-content__card-list');
+  })
+
+  $('.shop-grid').on('click', function () {
+    $('.shop-content__products').removeClass('shop-content__products--list');
+    $('.product-card').removeClass('shop-content__card-list');
+  })
 
 
   $(function () {
