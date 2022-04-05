@@ -52,14 +52,15 @@ function styles() {
 
 function scripts() {
   return src([
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/slick-carousel/slick/slick.min.js',
-      'node_modules/mixitup/dist/mixitup.min.js',
-      'node_modules/swiper/swiper-bundle.min.js',
-      'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-      'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-      'app/js/main.js'
-    ])
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/mixitup/dist/mixitup.min.js',
+    'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+    'node_modules/rateyo/src/jquery.rateyo.js',
+    'app/js/main.js'
+  ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
@@ -81,11 +82,11 @@ function images() {
       }),
       imagemin.svgo({
         plugins: [{
-            removeViewBox: true
-          },
-          {
-            cleanupIDs: false
-          }
+          removeViewBox: true
+        },
+        {
+          cleanupIDs: false
+        }
         ]
       })
     ]))
@@ -119,12 +120,12 @@ function svgSprites() {
 
 function build() {
   return src([
-      'app/html/**/*.html',
-      'app/css/style.min.css',
-      'app/js/main.min.js'
-    ], {
-      base: 'app'
-    })
+    'app/html/**/*.html',
+    'app/css/style.min.css',
+    'app/js/main.min.js'
+  ], {
+    base: 'app'
+  })
     .pipe(dest('dist'));
 }
 

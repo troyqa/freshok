@@ -24,6 +24,10 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(6, 162px);
     }
+
+    @include mq("tablet") {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__card-list {
