@@ -1,0 +1,15 @@
+.payment {
+  display: flex;
+
+  &__item {
+    transition: opacity 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 26px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

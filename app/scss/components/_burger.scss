@@ -1,0 +1,64 @@
+.burger {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    width: 30px;
+    height: 2px;
+    background-color: $white;
+
+    @include mq("tablet") {
+      left: 8px;
+    }
+  }
+
+  &::before {
+    top: 12px;
+  }
+
+  &::after {
+    bottom: 10px;
+  }
+
+  @include mq("tablet-2") {
+    display: block;
+  }
+
+  &__item {
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: $white;
+
+    @include mq("tablet") {
+      left: 8px;
+    }
+  }
+
+  &--active .burger__item {
+    opacity: 0;
+  }
+
+  &--active {
+    &::before,
+    &::after {
+      top: 20px;
+      right: -3px;
+      width: 25px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

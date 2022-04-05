@@ -1,0 +1,80 @@
+<div class="basket">
+  <div class="basket__top">
+    <div class="basket__hading">
+      <span class="basket__title">Корзина</span>
+      <button class="basket__clear" type="submit">очистить корзину</button>
+    </div>
+    <button class="basket__close" type="button">
+      <span class="sr-only">Закрыть корзину</span>
+    </button>
+  </div>
+  <ul class="basket__products">
+
+    <li class="basket__item">
+      <article class="product-card basket__card">
+        <div class="basket__main">
+          <img class="basket__img" src="images/products/pineapple.jpg" width="60" height="60" alt="Ананас">
+          <div class="basket__values">
+            <h3 class="product-card__title basket__card-title">Ананас, 1шт</h3>
+            <div class="basket__pricing">
+              <span class="basket__price promotions__price">999<span class="promotions__currency">₽</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="basket__total">
+          <div class="counter basket__counter" action="#">
+            <button class="counter__btn" type="button">
+              <span class="sr-only">Минус</span>
+              <span class="counter__minus"></span>
+            </button>
+            <div class="counter__num">2</div>
+            <button class="counter__btn" type="button">
+              <span class="sr-only">Плюс</span>
+              <span class="counter__plus"></span>
+            </button>
+          </div>
+          <span class="basket__price promotions__price">1998<span class="promotions__currency">₽</span></span>
+        </div>
+        <button class="basket__close basket__close-item" type="button">
+          <span class="sr-only">Удалить товар с корзины</span>
+        </button>
+      </article>
+    </li>
+
+    <li class="basket__item">
+      <article class="product-card basket__card">
+        <div class="basket__main">
+          <img class="basket__img" src="images/products/dragon-fruit.jpg" width="60" height="60" alt="Питахайя">
+          <div class="basket__values">
+            <h3 class="product-card__title basket__card-title">Питахайя красная с белой мякотью, 1шт</h3>
+            <div class="basket__pricing">
+              <span class="basket__price promotions__price">1019<span class="promotions__currency">₽</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="basket__total">
+          <div class="counter basket__counter">
+            <button class="counter__btn" type="button">
+              <span class="sr-only">Минус</span>
+              <span class="counter__minus"></span>
+            </button>
+            <div class="counter__num">2</div>
+            <button class="counter__btn" type="button">
+              <span class="sr-only">Плюс</span>
+              <span class="counter__plus"></span>
+            </button>
+          </div>
+          <span class="basket__price promotions__price">2038<span class="promotions__currency">₽</span></span>
+        </div>
+        <button class="basket__close basket__close-item" type="button">
+          <span class="sr-only">Удалить товар с корзины</span>
+        </button>
+      </article>
+    </li>
+
+  </ul>
+  <div class="basket__summary">
+    Товаров на сумму <span class="basket__value">2038<span class="basket__currency">₽</span></span>
+  </div>
+  <button class="basket__btn" type="button">Оформить заказ</button>
+</div>

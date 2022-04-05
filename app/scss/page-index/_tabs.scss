@@ -1,0 +1,100 @@
+.tabs {
+  max-width: 690px;
+  margin: 0 auto;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-size: 18px;
+
+    &--active {
+      color: $green-900;
+      position: relative;
+      &::before {
+        @include pseudo;
+        top: -19px;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $green-900;
+      }
+    }
+  }
+
+  &__item {
+    display: none;
+    &.tabs__item--active {
+      display: block;
+    }
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 1.6;
+    & p:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    white-space: pre-line;
+    & span {
+      display: inline-block;
+      font-weight: 700;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__reviews-title {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
+
+  &__reviews-content {
+    margin-bottom: 72px;
+  }
+
+  &__reviews-item {
+    padding-bottom: 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+      border-bottom: 1px solid $silver-600;
+    }
+  }
+
+  &__reviews-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__reviews-user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reviews-avatar {
+    margin-right: 24px;
+    border-radius: 50%;
+  }
+
+  &__reviews-author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__reviews-name {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,142 @@
+.promotions {
+  text-align: center;
+  background-color: #f5f5f5;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 124px);
+    grid-gap: 30px;
+    margin-bottom: 48px;
+    text-align: left;
+
+    @include mq("desktop") {
+      grid-gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 124px);
+    }
+
+    @include mq("tablet-2") {
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 124px);
+      margin-bottom: 36px;
+    }
+
+    @include mq("phone-2") {
+      grid-gap: 15px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 124px);
+      margin-bottom: 24px;
+    }
+  }
+
+  &__card {
+    max-width: 400px;
+    padding: 13px 14px 11px 12px;
+    background-color: $white;
+    @include mq("phone") {
+      max-width: 300px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__img {
+    margin-right: 10px;
+    object-fit: cover;
+    @include mq("tablet-2") {
+      margin-right: 0;
+    }
+    @include mq("phone") {
+      margin-right: 15px;
+    }
+  }
+
+  &__values {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__title {
+    padding: 0;
+    margin-bottom: auto;
+  }
+
+  &__stock {
+    margin-bottom: 5px;
+    color: $green-900;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &--running {
+      color: $red-900;
+    }
+
+    &--out {
+      color: $silver-600;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    margin-right: 14px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $dark-500;
+  }
+
+  &__currency {
+    font-size: 14px;
+  }
+
+  &__promo {
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: $silver-600;
+  }
+
+  &__rating {
+    position: relative;
+    padding-right: 18px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+    &::after {
+      @include pseudo;
+      top: -2px;
+      right: 0;
+      width: 16px;
+      height: 16px;
+      @extend %bg;
+      background-image: url("../images/icons/star.svg");
+    }
+  }
+}

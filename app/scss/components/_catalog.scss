@@ -1,0 +1,112 @@
+.catalog {
+  position: relative;
+
+  &__btn {
+    position: relative;
+    width: 240px;
+    padding: 15px 32px 15px 58px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: 6px;
+    color: $green-900;
+    background-color: $white;
+    transition: background-color 0.3s, border-radius 0.2s;
+
+    @include mq("tablet") {
+      display: none;
+    }
+
+    &--active {
+      border-radius: 6px 6px 0 0;
+      background-color: $green-200;
+
+      &::after {
+        transform: rotate(315deg);
+      }
+    }
+
+    &::after {
+      @include pseudo;
+      top: 20px;
+      right: -40px;
+      width: 6px;
+      height: 6px;
+      margin-right: 60px;
+      border-top: 1px solid $green-900;
+      border-right: 1px solid $green-900;
+      transform: rotate(135deg);
+      transition: transform 0.15s;
+    }
+
+    &:hover {
+      background-color: $green-200;
+    }
+  }
+
+  &__burger {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: 20px;
+    height: 1px;
+    background-color: $green-900;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      left: 0;
+      width: 25px;
+      height: 1px;
+      background-color: $green-900;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid #ebebeb;
+    border-radius: 0 0 6px 6px;
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: opacity 0.4s, translateY 0.4s;
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    border-left: 3px solid transparent;
+    transition: border-left-color 0.3s, color 0.3s;
+
+    &:hover {
+      color: $green-900;
+      border-left-color: $green-900;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:active {
+      color: #c1c1c1;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 15px 0 15px 24px;
+  }
+}

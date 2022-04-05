@@ -1,0 +1,164 @@
+.popup-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 300px;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: $white;
+  z-index: 99;
+
+  &--active {
+    display: block;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 12px 26px 15px;
+  }
+
+  .user-nav {
+    padding: 0 44px 0 12px;
+    list-style-type: none;
+    color: $white;
+    background-color: $green-900;
+    &__item {
+      &--enter {
+        position: relative;
+        margin-right: 15px;
+        padding-right: 15px;
+        &::after {
+          @include pseudo;
+          top: 16px;
+          right: 0;
+          width: 1px;
+          height: 18px;
+          background-color: $white;
+        }
+      }
+    }
+
+    &__btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 400;
+    }
+
+    &__icon {
+      margin-right: 10px;
+    }
+  }
+
+  .catalog button {
+    display: block;
+    width: 100%;
+    padding: 10px 55px;
+    font-size: 18px;
+    color: $dark-800;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .catalog span {
+    top: 21px;
+    left: 16px;
+    background-color: $dark-800;
+
+    &::before,
+    &::after {
+      background-color: $dark-800;
+    }
+  }
+
+  &__address {
+    padding: 24px 15px 10px;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+    border-top: 1px solid rgba($silver-600, 0.3);
+  }
+
+  &__contact {
+    margin-bottom: 18px;
+  }
+
+  &__contact-item {
+    position: relative;
+    max-width: 270px;
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__contact-link {
+    display: block;
+    padding-left: 39px;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+
+    &::before {
+      @include pseudo;
+      width: 24px;
+      @extend %bg;
+    }
+
+    &--tel {
+      &::before {
+        top: 0;
+        left: 0;
+        height: 24px;
+        background-image: url("../images/sprite.svg#icon-tel");
+      }
+    }
+
+    &--address {
+      &::before {
+        top: 3px;
+        left: -1px;
+        height: 32px;
+        background-image: url("../images/sprite.svg#icon-position");
+      }
+    }
+  }
+
+  .social {
+    &__link svg {
+      fill: $dark-800;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 24px 15px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .burger-close {
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s ease-in-out;
+    transform: translate(-50%, -50%);
+  }
+
+  .burger-close.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,33 @@
+.fav-btn {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+
+  &:focus {
+    box-shadow: 0 0 0 3px #e0edcf;
+    border-radius: 3px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    fill: $silver-600;
+    width: 32px;
+    height: 28px;
+    transition: fill 0.3s, opacity 0.3s;
+
+    @include mq("phone") {
+      left: 12px;
+      width: 26px;
+      height: 22px;
+    }
+
+    &:hover {
+      fill: $yellow-900;
+    }
+  }
+}
